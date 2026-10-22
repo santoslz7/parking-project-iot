@@ -1,0 +1,27 @@
+# Segredos e credenciais
+.env
+.env.*
+!.env.example
+*service-account*.json
+*firebase-adminsdk*.json
+*credentials*.json
+*.pem
+*.key
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+logs/
+
+# Node
+node_modules/
+
+# Sistema e editor
+.DS_Store
+.vscode/
+.idea/
