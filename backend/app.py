@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 
 from config import Config
+from routes.iot import bp as iot_bp
 from routes.parking_lots import bp as parking_lots_bp
 
 
@@ -10,6 +11,7 @@ def create_app():
     CORS(app, origins=Config.CORS_ORIGINS)
 
     app.register_blueprint(parking_lots_bp)
+    app.register_blueprint(iot_bp)
 
     @app.get("/health")
     def health():
